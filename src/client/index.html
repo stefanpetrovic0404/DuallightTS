@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../lighthouse.png">
+  <title>Duallighthouse</title>
+</head>
+
+<body class="bg-black" data-bs-theme="dark">
+  <header class="navbar navbar-expand-md bg-dark sticky-top p-3 justify-content-between">
+    <div class="duallight m-0 ps-4 pe-4 pt-2 pb-2">
+      <div class="dlh-icon"><a href="https://unlighthouse.dev/" target="_blank"></a></div>
+      <div class="Duallighthouse">Duallighthouse</div>
+      <div class="dual-lighthouse">
+        <div class="lh1"></div>
+        <div class="lh2"></div>
+      </div>
+    </div>
+    <div class="audit-btn-wrapper">
+      <button id="auditModalBtn" class="btn btn-danger btn-custom">
+        Audit
+      </button>
+    </div>
+    <!-- <div id="container"></div> -->
+  </header>
+
+  <div class="">
+    <div class="filter-card row row-cols-1 row-cols-sm-2 row-cols-md-3 m-3 align-items-center">
+      <label class="audit-label">Audit Reports: </label>
+      <label class="filter-label text-end">Sort by: &nbsp; </label>
+      <div class="ps-3 pe-0">
+        <div id="filter-buttons" class="d-flex flex-wrap p-0 filter-btn-wrapper">
+          <button id="sortByDate" class="col btn btn-secondary w-auto active flex-shrink-1">
+            Time
+          </button>
+          <div class="p-1"></div>
+          <button id="sortByDomain" class="col btn btn-secondary w-auto flex-shrink-1">
+            Domain
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="reports" class="p-3 pt-0"></div>
+  </div>
+  <div class="loading" id="loading">
+    <div class="loading-text p-3">Audit in progress</div>
+    <div class="dual-load">
+      <div class="dual-lighthouse">
+        <div class="lh1"></div>
+        <div class="lh2"></div>
+      </div>
+    </div>
+    <div class="spinner-grow" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+  <dialog id="auditFormDialog" class="auditFormDialog">
+    <div class="modal-dialog h-100">
+      <div class="modal-content" style="height: 100%">
+        <div class="modal-header mb-4 d-flex justify-content-between">
+          <h1 class="modal-title fs-2">Audit</h1>
+          <button id="closeAuditBtn" type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div class="modal-body expand" style="overflow-y: auto">
+          <form>
+            <div
+              class="align-items-center pb-1 ps-4 d-flex flex-sm-row pt-0 justify-content-between flex-column mb-4 row-cols-1 row-cols-sm-2 row-cols-md-4 pb-4">
+              <label for="device" class="device-label"> device: </label>
+              <select name="device" id="device" class="form-select w-auto">
+                <option value="mobile" selected>Mobile</option>
+                <option value="desktop">Desktop</option>
+              </select>
+            </div>
+            <div class="align-items-center justify-content-between d-flex flex-wrap pb-4">
+              <label class="category-input-lablel d-flex align-items-center">
+                <input class="category-input" type="checkbox" id="seo" name="onlyCategories" value="seo" />
+                SEO
+              </label>
+              <label class="category-input-lablel d-flex align-items-center">
+                <input class="category-input" type="checkbox" id="performance" name="onlyCategories"
+                  value="performance" />
+                Performance
+              </label>
+              <label class="category-input-lablel d-flex align-items-center">
+                <input class="category-input" type="checkbox" id="accessibility" name="onlyCategories"
+                  value="accessibility" />
+                Accessibility
+              </label>
+              <label class="category-input-lablel d-flex align-items-center">
+                <input class="category-input" type="checkbox" id="best-practices" name="onlyCategories"
+                  value="best-practices" />
+                Best Practices
+              </label>
+            </div>
+
+            <div id="inputContainer" class="mb-4"></div>
+            <div>
+              <button id="addUrl" class="btn btn-secondary w-100 mb-4">
+                Add Url
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="auditBtn" class="btn auditBtn w-25 w-auto">
+            Create audit
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="reportModal" class="reportModaldialog w-100">
+    <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="reportModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-3 shadow">
+          <div class="modal-header border-bottom-0">
+            <h1 class="modal-title fs-6">Modal title</h1>
+            <button type="button" class="btn-close" id="closeReportModal" aria-label="Close"></button>
+          </div>
+          <div class="modal-header border-bottom-0"></div>
+          <div class="modal-body py-0 pb-3"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="main.ts"></script>
+</body>
+
+</html>

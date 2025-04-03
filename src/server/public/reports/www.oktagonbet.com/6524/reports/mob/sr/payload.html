@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>OktagonBet</title>
+
+        <base href="/mob/">
+        <meta name="viewport"
+            content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <!-- Nemanja: solution for IPad whitescreen on load-->
+        <!-- <meta http-equiv="Content-Security-Policy"
+        content="font-src 'self' http:// data:; img-src 'self' data: http:// ; default-src 'self' data: blob: gap://ready file:// ; style-src 'self' http:// 'unsafe-inline'; script-src 'self' http:// 'unsafe-inline' 'unsafe-eval'"> -->
+
+        <!-- add to homescreen for ios -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon/favicon-96x96.png">
+
+        <link rel="apple-touch-icon" href="assets/icon/favicon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="assets/icon/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/favicon/apple-icon-180x180.png">
+
+        <style>
+
+        </style>
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#161b20" />
+    <link rel="stylesheet" href="styles.0219678e1855a73dfa79.css"></head>
+
+    <body>
+        <app-root></app-root>
+        <noscript>Please enable JavaScript to continue using this application.</noscript>
+        <script>
+
+            if (navigator.userAgent.toLowerCase().indexOf('firefox') < 0) {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('combined-sw.js')
+                        .then(() => {
+                            console.log('service worker installed', navigator);
+                        })
+                        .catch(err => console.log('Error: ', err));
+                }
+            }
+        </script>
+    <script type="text/javascript" src="runtime.ece758a3f1258b312d17.js"></script><script type="text/javascript" src="es2015-polyfills.7bbec4e94732b01a155b.js" nomodule></script><script type="text/javascript" src="polyfills.d69a04b8e50337a29218.js"></script><script type="text/javascript" src="scripts.753194d9a4e88a4650ba.js"></script><script type="text/javascript" src="main.1696544cb96ae2d567d0.js"></script></body>
+
+</html>

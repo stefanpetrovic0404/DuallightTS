@@ -1,0 +1,347 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+* {
+    user-select: none;
+}
+
+@media screen and (max-width: 780px) {
+    .audit-label,
+    .filter-label,
+    .device-label {
+        display: none;
+    }
+    .ps-3.pe-0 {
+        width: 100%;
+    }
+    .navbar {
+        justify-content: center !important;
+    }
+    .filter-card {
+        height: 126px;
+        padding-left: 0 !important;
+        margin: 0 !important;
+        top: 0 !important;
+    }
+    .modal {
+        padding: 0 !important;
+    }
+    .reportModaldialog {
+        margin: auto;
+    }
+    .url-button-wrap {
+        min-width: 33% !important;
+        text-overflow: ellipsis;
+        white-space: pre;
+        overflow: hidden;
+    }
+    .btn-danger,
+    .btn-secondary {
+        font-size: 12px;
+        line-height: 13px;
+        height: 35px;
+    }
+    .auditBtn {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) !important;
+        background-size: 400% 400% !important;
+        animation: gradient 25s ease infinite;
+        color: #673ab7;
+        font-size: 17px;
+        border: 2px solid #673ab7;
+    }
+    .form-select {
+        width: 100% !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .card-wrap {
+        padding: 0;
+    }
+    .card-wrapper {
+        margin: 3px !important;
+    }
+}
+h4 {
+    text-overflow: ellipsis;
+    white-space: pre;
+    overflow: hidden;
+}
+input[type="checkbox"] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.auditBtn {
+    background: #5c34a4;
+}
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    border-bottom: 1px solid #495057;
+}
+.duallight {
+    color: #dee2e6;
+    position: relative;
+    display: flex;
+}
+
+.card-wrapper {
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.card-wrap {
+    perspective: 300px;
+}
+.card-wrapper:hover {
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+.audit-label {
+    color: #dee2e6;
+}
+.filter-buttons {
+    color: #dee2e6;
+}
+.Duallighthouse {
+    font-size: 25px;
+}
+.dual-lighthouse {
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    top: 13px;
+    left: 0;
+    justify-content: center;
+    display: flex;
+}
+.card-body {
+    min-height: 130px;
+}
+.audit-btn-wrapper {
+    /* margin-left: auto; */
+}
+.lh1 {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(100deg, #212121 calc(50% - 100px), #fff, #212121 calc(50% + 100px));
+    transform-origin: center;
+    animation: rotate-beam 25s linear infinite;
+    animation-delay: 1s;
+    position: absolute;
+    top: 0px;
+}
+.lh2 {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(100deg, #212121 calc(50% - 100px), #fff, #212121 calc(50% + 100px));
+    transform-origin: center;
+    animation: rotate-beam 25s linear infinite;
+    animation-delay: 5s;
+    bottom: -30px;
+    position: absolute;
+}
+@keyframes rotate-beam {
+    from {
+        transform: rotateY(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.auditFormDialog {
+    background: #212529;
+    border: 1px solid #424549;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 50%;
+}
+.reportModaldialog {
+    background: transparent;
+    border: none;
+}
+.reportModaldialog .modal-header:nth-child(2) {
+    padding: 0;
+}
+.modal-title {
+    color: #dee2e6;
+}
+.btn-custom {
+    min-width: 248px;
+    /* width: auto; */
+}
+html {
+    height: 100%;
+}
+.active {
+    background: #673ab7 !important;
+    border: 1px solid #673ab7 !important;
+}
+.form-control-url {
+    width: -webkit-fill-available;
+    padding-left: 10px;
+}
+.url-button-wrap {
+    min-width: 25%;
+}
+select {
+    min-width: 222px;
+}
+.report-btn {
+    background: #212529 !important;
+    border: 1px solid #424549 !important;
+}
+.report-btn:hover {
+    filter: sepia(1);
+    transition-duration: 0.2s;
+    /* border: 1px solid #6c757d; */
+}
+.audit-tag {
+    /* background: #673ab7 !important; */
+    border-radius: 3px;
+    padding: 3px 5px;
+    min-width: -moz-min-content;
+    /* min-width: min-content; */
+    text-align: center;
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    /* flex-grow: 1; */
+    width: auto;
+    border: 1px solid #6c757d;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    opacity: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+.dual-load {
+    position: relative;
+    width: 100%;
+    top: -57px;
+}
+.category-input-lablel {
+    min-width: 49%;
+    max-width: 49%;
+    width: -webkit-fill-available;
+    border: 1px solid #424549;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.category-input-lablel:hover {
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+.filter-card {
+    background: #212529;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #495057;
+    position: sticky;
+    top: 7px;
+    z-index: 1020;
+}
+.auditBtn {
+    background: #5c34a4;
+    min-width: -webkit-fill-available;
+    margin: auto;
+    font-weight: bold;
+    height: 50px;
+}
+.auditBtn:hover {
+    background: #5c34a4;
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+.form-select {
+    cursor: pointer;
+}
+.form-select:focus {
+    border-color: #6c757d;
+    outline: 0;
+    box-shadow: none;
+    color: #c2c2c2;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3b3b3b;
+    border-radius: 10px;
+}
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background: #000000ad;
+    transition: 3s ease-in;
+}
+
+.gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 35s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+button:hover {
+    filter: sepia(1);
+    transition-duration: 0.2s;
+}
+.dlh-icon {
+    background-image: url(../lighthouse.png);
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    position: relative;
+    left: -25px;
+    top: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
