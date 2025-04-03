@@ -2,6 +2,9 @@
   "name": "duallightts",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+  "node": "22.14"
+  },
   "scripts": {
     "dev:server": "nodemon --watch src/server src/server/server.ts",
     "dev:client": "vite",
