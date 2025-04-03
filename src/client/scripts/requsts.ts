@@ -9,7 +9,7 @@ function deleteReport(id: string) {
 }
 
 function createAudit(config: UserConfig) {
-    return axios.post<UserConfig>([domain + '/api/audit'].join(''), config);
+    return axios.post<UserConfig>([domain + '/api/audit'].join(''), {config});
 }
 
 function getMap() {
